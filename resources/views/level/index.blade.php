@@ -20,7 +20,7 @@
               <tr>
                 <th>ID</th>
                 <th>Kode Level</th>
-                <th>Kode Nama</th>
+                <th>Nama Level</th>
                 <th>Aksi</th></tr> 
             </thead>
           </table>

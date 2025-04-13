@@ -68,4 +68,32 @@
       </li> 
     </ul> 
   </nav> 
-</div> 
+</div>
+
+<!-- Logout Button -->
+<br><br>
+<div class="mt-4 mb-3 text-center">
+    <a href="javascript:void(0);" class="btn btn-danger btn-block" id="logout-btn">
+        <i class="fas fa-sign-out-alt"></i> Logout
+    </a>
+</div>
+</div>
+<script>
+  document.getElementById("logout-btn").addEventListener("click", function(event) {
+      event.preventDefault();
+      Swal.fire({
+          title: "Yakin ingin keluar dari akun Anda?",
+          icon: "question",
+          showCancelButton: true,
+          confirmButtonColor: "#007bff",
+          cancelButtonColor: "#6c757d",
+          confirmButtonText: "Ya, Keluar",
+          cancelButtonText: "Tidak, Tetap Masuk"
+      }).then((result) => {
+          if (result.isConfirmed) {
+              // Redirect langsung ke URL logout
+              window.location.href = "/logout";
+          }
+      });
+  });
+</script>

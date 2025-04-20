@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LevelController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WelcomeController;
@@ -34,6 +35,8 @@ Route::post('/register', [AuthController::class, 'register'])->name('register.po
 
 Route::middleware(['auth'])->group(function() {
     Route::get('/', [WelcomeController::class, 'index']);
+
+    Route::post('/profile/update-avatar', [ProfileController::class, 'updateAvatar']);
 
     Route::group(['prefix' => 'user'], function() {
         Route::get('/', [UserController::class, 'index']);

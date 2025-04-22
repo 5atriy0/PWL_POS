@@ -11,7 +11,7 @@
                 <div class="form-group">
                     <label>Kategori Barang</label>
                     <select name="kategori_id" id="kategori_id" class="form-control" required>
-                        <option value="">- Pilih Level -</option>
+                        <option value="">- Pilih Kategori -</option>
                         @foreach ($kategori as $k)
                             <option value="{{ $k->kategori_id }}">{{ $k->kategori_nama }}</option>
                         @endforeach
